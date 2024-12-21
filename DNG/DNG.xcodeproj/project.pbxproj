@@ -82,7 +82,6 @@
 				C274044822F2DF2FEB983DC1 /* Pods-DNG.debug.xcconfig */,
 				9416EB90696E2B7DB79F9B5E /* Pods-DNG.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
