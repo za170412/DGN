@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainController.swift
 //  DNG
 //
 //  Created by admin on 2024/12/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UITabBarController {
+class MainController: UITabBarController {
     var bannerView: UIView!
 
     override func viewDidLoad() {
@@ -18,9 +18,13 @@ class ViewController: UITabBarController {
         self.view.backgroundColor = UIColor.clear
         self.tabBarItem.badgeColor = .white
         self.tabBar.backgroundColor = .clear
-        NotificationCenter.default
+        NotificationCenter.default.reinstall(observer: self, name: .Purchased, selector: #selector(self.reloadBanner))
     }
-
-
+    
+    @objc func reloadBanner(){
+        if self.bannerView.subviews.count > 0 {
+            self.bannerView.removeFromSuperview()
+        }
+    }
 }
 
