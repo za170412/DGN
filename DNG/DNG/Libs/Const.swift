@@ -10,4 +10,5 @@ import UIKit
 
 extension Notification.Name {
     static let Purchased = NSNotification.Name("Purchased")
+    static let InitAdSDK = NSNotification.Name("InitAdSDK")
 }
