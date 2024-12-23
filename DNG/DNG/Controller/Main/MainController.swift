@@ -19,6 +19,9 @@ class MainController: UITabBarController {
         self.tabBarItem.badgeColor = .white
         self.tabBar.backgroundColor = .clear
         NotificationCenter.default.reinstall(observer: self, name: .Purchased, selector: #selector(self.reloadBanner))
+        NotificationCenter.default.reinstall(observer: self, name: .InitAdSDK, selector: #selector(self.reloadBanner))
+        
+        let normalFont = UIFont(name: <#T##String#>, size: <#T##CGFloat#>)
     }
     
     @objc func reloadBanner(){
